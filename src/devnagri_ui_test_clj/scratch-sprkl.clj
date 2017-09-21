@@ -4,6 +4,8 @@
             [sparkledriver.cookies :as sprkl-cookies]
             [sparkledriver.retry :as sprkl-retry]))
 
+
+
 (def browser-options
   {;; how long to wait for resources loaded by ajax, in milliseconds (default is quite long)
    :ajax-load-timeout [30000 #(.ajaxResourceTimeout %1 %2)]
@@ -35,11 +37,23 @@
    ;; SSL certificate verification, off by default because the internet is broken
    :verify-hostname?  [false #(.hostnameVerification %1 %2)]})
 
-(sprkl-browser/with-browser [browser (sprkl-browser/make-browser browser-options)]
+
+
+
+(sprkl-browser/with-browser [browser (sprkl-browser/make-browser )]
   (-> (sprkl-browser/fetch! browser "http://clojure.org")
       (sprkl-element/find-by-xpath* "//div[@class='clj-intro-message']/p")
       (nth 2)
-      (sprkl-browser/execute-script browser "console.log(\"hi\")")))
-;      sprkl-element/text))
+;      (sprkl-browser/execute-script browser "console.log(\"hi\")")))
+      sprkl-element/text))
 
 
+
+
+
+(sprkl-browser/make-browser :headless false :logJavascript [] )
+
+;;;;;;;;;;; RAW JAVA INTEROP
+
+
+(require 'com.machinepublishers.jbrowserdriver.Settings)
