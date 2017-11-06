@@ -6,7 +6,9 @@
   :dependencies [
 
                  ;; Browser automation - javaFX embedded browser
-                 [sparkledriver "0.2.0"]
+                 ;[sparkledriver "0.2.0"]
+
+                 [com.github.abhi18av/sparkledriver "v0.3.0"]
 
 
                  ;; Clojure layer over parenthesis
@@ -23,7 +25,7 @@
 
 
                  ;; Frozen clojure version
-                 [org.clojure/clojure "1.9.0-alpha17"]
+                 [org.clojure/clojure "1.9.0-beta4"]
 
                  ;; Quickcheck
                  [org.clojure/test.check "0.10.0-alpha2"]
@@ -55,6 +57,7 @@
 
 
   ]
+  :repositories [["jitpack" "https://jitpack.io"]]
   :main ^:skip-aot devnagri-ui-test-clj.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})

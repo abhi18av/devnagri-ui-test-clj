@@ -1,0 +1,1 @@
+ interp.load.ivy( "com.lihaoyi" %% "utest" % "0.5.3")
