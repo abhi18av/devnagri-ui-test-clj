@@ -10,6 +10,11 @@
 
                  [com.github.abhi18av/sparkledriver "v0.3.0"]
 
+                 ; Logging
+                 ;[com.taoensso/timbre "4.10.0"]
+                 ;[org.clojure/tools.logging "0.4.0"]
+                 [onelog "0.4.5"]
+
 
                  ;; Clojure layer over parenthesis
                  [webica "3.0.0-beta2-clj0"]
