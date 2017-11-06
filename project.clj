@@ -13,7 +13,8 @@
                  ; Logging
                  ;[com.taoensso/timbre "4.10.0"]
                  ;[org.clojure/tools.logging "0.4.0"]
-                 [onelog "0.4.5"]
+                 ;[onelog "0.4.5"]
+                  [com.fzakaria/slf4j-timbre "0.3.7"]
 
 
                  ;; Clojure layer over parenthesis
